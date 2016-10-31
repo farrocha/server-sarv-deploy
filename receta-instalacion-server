@@ -38,8 +38,8 @@ mono /home/sarv/server-sarv-deploy/sarv-paso-0.exe
 
 
 
-# Anadir este comando al crontab
-git --git-dir=/home/sarv/server-sarv-deploy/.git --work-tree=/home/sarv/server-sarv-deploy pull
+# Anadir este comando al crontab para que el server se actualice automaticamente cada hora, en caso que existan cambios
+(crontab -l ; echo "5 * * * * git --git-dir=/home/sarv/server-sarv-deploy/.git --work-tree=/home/sarv/server-sarv-deploy pull") | crontab -
 
 
 
