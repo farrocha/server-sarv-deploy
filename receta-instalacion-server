@@ -1,0 +1,46 @@
+#Receta Instalacion
+#AWS
+
+sudo su
+adduser sarv
+usermod -aG sudo sarv
+visudo
+
+#Permitir la conexion sin la necesidad de la llave
+#https://coderwall.com/p/j5nk9w/access-ec2-linux-box-over-ssh-without-pem-file
+
+nano /etc/ssh/sshd_config
+# change PasswordAuthentication to yes
+
+sudo /etc/init.d/ssh restart
+sudo reboot
+
+# ahora nos conectamos via ssh usando el usuario sarv tal y como en una instalacion local
+sudo apt-get update
+
+
+#Install Mono
+sudo apt-get install mono-complete
+
+#Install ffmpeg
+sudo apt-get install ffmpeg
+
+#Install Java
+sudo add-apt-repository ppa:webupd8team/java
+sudo apt-get update
+sudo apt-get install oracle-java8-installer
+
+
+#Install Programas
+sudo apt-get install git
+git clone https://github.com/farrocha/server-sarv-deploy.git
+mono /home/sarv/server-sarv-deploy/sarv-paso-0.exe
+
+
+
+# Anadir este comando al crontab
+git --git-dir=/home/sarv/server-sarv-deploy/.git --work-tree=/home/sarv/server-sarv-deploy pull
+
+
+
+
