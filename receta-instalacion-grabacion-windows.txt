@@ -1,0 +1,23 @@
+Receta Windows
+
+#Instalar HyperV o VMWare o VirtualBox
+# Ejecutar la instalacion de las VM correspondientes : 1 por canal + 1 reproceso + 1 dias anteriores ( de esta debemos tener el IP bien defindo )
+Reboot
+
+#Instalar NPVR
+Reboot
+
+#Instalar git
+
+#Abrir cmd.exe
+cd c:\
+git clone https://github.com/farrocha/server-sarv-deploy.git
+
+# Configurar Grabaciones
+# Se debe conocer los IDMedios que se van a Grabar
+server-sarv-pasos.exe 3101
+
+# Configurar el ejecutor de nuevas grabaciones
+schtasks /create /tn "SchedulerGrabaciones" /tr c:\server-sarv-deploy\server-sarv-pasos.exe 3102 /sc daily /st 08:00 /ed 31/12/2025
+
+
