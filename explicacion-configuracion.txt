@@ -1,0 +1,69 @@
+Tipos de Computadoras:
+1) Grabacion "Casa"  --> 	Generalmente en Server con VM
+				Puede ser sabor Linux o Windows
+		Windows		
+		Ejecuta paso 3200 : Para pasar los archivos MPG a las maquinas VM. Cambia el nombre del archivo en el caso 		
+			3290 : 		Borra archivos DirMP2 Viejos
+					Pasa archivos de la carpeta DirMPG1 -> DirMPG2	
+		El configurador, ademas de los parametros, debe correr el archivo que configura NextPVR
+
+		Linux
+		Probar MythTV ? en lugar de vlc para transmisiones Digitales
+		Ejecuta paso 3201 : pasa los archivos MPG , sin cambiar el nombre
+
+
+
+2) Huellas   "Cuarto" --> Generalmente en VM
+		Ejecuta el paso 2000 : Revisa los videos de programacion y determina el matcher
+		Paso 1240 : Pasa archivos de programacion a las maquinas tipo reproceso, carga las imagenes zip a la nube, copia los archivos MP4 a la maquina "casa" para respaldo
+		Paso 1290 : Borra archivos viejos de Huellas de Programacion, MP4, MPGS, ZIP Files y archivos de Matcher
+3) Reproceso "Cuarto" --> Generalmente en VM
+		Ejecuta el paso 2200 : Procesa dias anteriores de los archivos de huellas de programacion presentes
+		Paso 1290 : Borrar lo viejo
+3) Conversion Huellas Versiones --> Revisa las versiones en MPG y calcula las huellas
+		Paso 2100
+4) Convertidor MPG a MP4 con Thumbnails
+		Paso 4100
+
+
+
+Archivos de Configuracion
+Todos los archivos traen 
+
+1) GRABACION
+		OS --> Detectado
+		IP_Local --> Ingresado
+		IDComputadora
+		IDPais
+		DiasMPG
+		DiasMP4
+		DirGrabacion
+		DirMPG_1
+		DirMP4_1
+		DirMPG_2
+		DirMP4_2
+	El Configurador detecta todas estas variables, crea la computadora en el sistema
+	Configura el paso 3200
+	No requiere conocer nada de quien son sus "hijos" dado que eso esta en la base de datos
+
+2) Huellas ( VM )
+		OS -->Detectado
+		IP_Local
+		IDComputadora
+		IDPais
+		DiasMPG ( 2 )
+		DiasMP4 ( 2 )
+		IP_Reproceso
+		IP_Parent
+		Lista_Medios
+
+4) Reproceso
+		OS -->Detectado
+		IP_Local
+		IDComputadora
+		DiasAtras
+		IDPais
+		IP_Parent
+		
+
+

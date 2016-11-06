@@ -18,6 +18,6 @@ git clone https://github.com/farrocha/server-sarv-deploy.git
 sarv-mono-pasos.exe 3101
 
 # Configurar el ejecutor de nuevas grabaciones
-schtasks /create /tn "SchedulerGrabaciones" /tr c:\server-sarv-deploy\server-sarv-pasos.exe 3102 /sc daily /st 08:00 /ed 31/12/2025
+schtasks /create /tn "SchedulerGrabaciones" /tr "\"c:\server-sarv-deploy\sarv-paso-0.exe\" \"3102\"" /sc daily /st 08:00 /ed 31/12/2025
 
 
