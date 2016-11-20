@@ -1,5 +1,20 @@
 Receta Windows
 
+Este server :
+1) Graba canales usando NextPVR
+2) Traslada los archivos ( le cambia el nombre ) a las VM correspondiente. Esto se hace leyendo el 
+canal, consultado la tabla ( mysql ) para determinar la VM a la que debe mandar el archivo ( IP )
+3) Luego de copiar, debe pasar el archivo a la carpeta de backup en el server de Backup, puede ser este mismo. 
+
+Procesos Periodicos CRON
+Paso 3102 : pasa los archivos a donde se procesaran 
+Paso 3103 : pasa los archivos a la carpeta ( server ) de Grabacion
+
+
+
+
+
+
 
 #Instalar NPVR
 http://www.nextpvr.com/NPVRSetup_3_9_2_161119.exe
