@@ -1,13 +1,12 @@
 Receta Windows
 
-#Instalar HyperV o VMWare o VirtualBox
-# Ejecutar la instalacion de las VM correspondientes : 1 por canal + 1 reproceso + 1 dias anteriores ( de esta debemos tener el IP bien defindo )
-Reboot
 
 #Instalar NPVR
+http://www.nextpvr.com/NPVRSetup_3_9_2_161119.exe
 Reboot
 
 #Instalar git
+https://github-windows.s3.amazonaws.com/GitHubSetup.exe
 
 #Abrir cmd.exe
 cd c:\
@@ -15,6 +14,7 @@ git clone https://github.com/farrocha/server-sarv-deploy.git
 
 # Configurar Grabaciones
 # Se debe conocer los IDMedios que se van a Grabar
+cd c:\server-sarv-deploy
 sarv-mono-pasos.exe 3101
 
 # Configurar el ejecutor de nuevas grabaciones

@@ -8,7 +8,7 @@ Tipos de Computadoras:
 		El configurador, ademas de los parametros, debe correr el archivo que configura NextPVR
 
 		Linux
-		Probar MythTV ? en lugar de vlc para transmisiones Digitales
+		
 		Ejecuta paso 3201 : pasa los archivos MPG , sin cambiar el nombre
 
 
@@ -24,6 +24,11 @@ Tipos de Computadoras:
 		Paso 2100
 4) Convertidor MPG a MP4 con Thumbnails
 		Paso 4100
+5) Backup : Este server tiene las carpetas donde se almacenan los archivos MPG , MP4
+		Procesa los JObs
+		Puede tener varias carpetas de grabacion
+		Borra los archivos viejos segun los parametros
+
 
 
 
