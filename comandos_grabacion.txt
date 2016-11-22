@@ -1,0 +1,9 @@
+vlc pvr:///dev/video0 :norm=ntsc :size=720x480 :bitrate=3000000 :maxbitrate=4000000 :run-time=35 --cr-average 1000 --sout=file/ps:///home/sarv/SERVER_SARV_MONO/VideosBase/909_py_20161121225418.mpg 
+vlc://quit
+
+vlc -I dummy -vvv 'v4l2c://:audio-method=0:controls-reset:set-ctrls={video_bitrate_mode=1,video_bitrate=4000000,video_peak_bitrate=4000000}:width=720:height=576:tuner=0:tuner-frequency=77250'  --sout=file/ps:///home/sarv/SERVER_SARV_MONO/VideosBase/909_py_20161121225418_6.mpg 
+
+
+
+cvlc 'v4l2c:///dev/video1:audio-method=0:controls-reset:set-ctrls={video_bitrate_mode=1,video_bitrate=4000000,video_peak_bitrate=4000000}:width=720:height=480' --run-time=15  --sout=file/ps:///home/sarv/SERVER_SARV_MONO/VideosBase/909_py_20161121225418_115.mpg vlc://quit
+
