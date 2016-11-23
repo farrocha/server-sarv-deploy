@@ -53,7 +53,7 @@ NombreArchivo = Medio + "_" + datetime.datetime.now().strftime(format_datetime) 
 NombreArchivo = os.path.join(DirectorioGrabacion,NombreArchivo)
 
 print 'Si hay proceso de grabacion activo en vlc , lo eliminaremos para evitar posibles conflicos'
-util.killProcess(cadena)
+util = clsUtilidades()
 cadena = "v4l2:///dev/video" + str(detalles[2])
 util.killProcess(cadena)
 
