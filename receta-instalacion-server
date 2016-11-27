@@ -18,17 +18,26 @@ sudo reboot
 # ahora nos conectamos via ssh usando el usuario sarv tal y como en una instalacion local
 sudo apt-get update
 
+sudo apt-get --yes install git
+git clone https://github.com/farrocha/server-sarv-deploy.git
+
+sudo sh /home/sarv/server-sarv-deploy/scripts_instalacion/script_1.sh
+mono /home/sarv/server-sarv-deploy/sarv-mono-pasos.exe CONF0
+
+
+
+
 
 #Install Mono
-sudo apt-get install mono-complete
+#sudo apt-get install mono-complete
 
 #Install ffmpeg
-sudo apt-get install ffmpeg
+#sudo apt-get install ffmpeg
 
 #Install Java
-sudo add-apt-repository ppa:webupd8team/java
-sudo apt-get update
-sudo apt-get install oracle-java8-installer
+#sudo add-apt-repository ppa:webupd8team/java
+#sudo apt-get update
+#sudo apt-get install oracle-java8-installer
 
 
 #Install Programas
