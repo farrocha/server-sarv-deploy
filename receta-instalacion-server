@@ -25,6 +25,17 @@ sudo sh /home/sarv/server-sarv-deploy/scripts_instalacion/script_1.sh
 mono /home/sarv/server-sarv-deploy/sarv-mono-pasos.exe CONF0
 
 
+#Install Scripts de Radio
+sudo apt-get install python-matplotlib
+sudo apt-get install libasound-dev
+cd Downloads
+wget http://www.portaudio.com/archives/pa_stable_v190600_20161030.tgz
+tar -xvf pa_stable_v190600_20161030.tgz
+cd portaudio
+./configure && make
+sudo make install
+pip install PyAudio
+pip install pydub
 
 
 
