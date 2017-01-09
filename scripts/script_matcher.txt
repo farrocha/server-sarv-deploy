@@ -1,0 +1,42 @@
+var DEFAULT_FS = 44100;
+			var DEFAULT_WINDOW_SIZE = 4096;
+			var DEFAULT_OVERLAP_RATIO = 0.5;
+			var DEFAULT_FAN_VALUE = 15;
+
+			Console.WriteLine ("Vamos a comparar las huellas...");
+			Console.WriteLine ("Comparando cancion 1 con 8....");
+			string sql = " Select HEX(hash), offset From fingerprints where song_id=1 and hash In ( Select hash from fingerprints where song_id=7)";
+			DataTable dtMatch = get_Table (sql);
+			Console.WriteLine ("Tengo {0} huellas", dtMatch.Rows.Count);
+			sql = "Select HEX(hash), Max(Offset) from fingerprints Where song_id=7 Group By HEX(hash)";
+			DataTable dtSample = get_Table (sql);
+			Dictionary<string,int> mapper = new Dictionary<string, int> ();
+			foreach (DataRow nR in dtSample.Rows) {
+				mapper.Add (nR [0].ToString ().ToUpper (), Convert.ToInt32 (nR [1]));
+			}
+
+			List<int> matches = new List<int> ();
+			foreach (DataRow nR in dtMatch.Rows) {
+				matches.Add (Convert.ToInt32 (nR [1]) - mapper [nR [0].ToString ().ToUpper ()]);
+			}
+			Console.WriteLine ("Ya tengo las diferencias son {0}", matches.Count);
+			Console.WriteLine ("Vamos con el calculo final....");
+
+			Dictionary<int,int> diff_counter = new Dictionary<int, int> ();
+			int tmp = 0;
+			int largest_count = 0;
+			int largest = 0;
+			foreach (var diff in matches) {
+				if (diff_counter.TryGetValue (diff, out tmp)) {
+					diff_counter [diff] += 1;
+				} else {
+					diff_counter.Add (diff, 1);
+				}
+				if(diff_counter[diff]>largest_count){
+					largest = diff;
+					largest_count = diff_counter [diff];
+				}
+			}
+			var nseconds = Math.Round( Convert.ToDouble(largest) / DEFAULT_FS * DEFAULT_WINDOW_SIZE * DEFAULT_OVERLAP_RATIO, 5);
+			Console.WriteLine("Respuesta de comparacion: Confidence {0},  Offset {1}, Offset-Seg {2}", largest_count, largest, nseconds);
+			Console.ReadLine ();
