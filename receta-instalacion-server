@@ -20,12 +20,14 @@ sudo apt-get update
 
 sudo apt-get --yes install git
 git clone https://github.com/farrocha/server-sarv-deploy.git
+git clone https://github.com/farrocha/sarv-radio.git
 
 sudo sh /home/sarv/server-sarv-deploy/scripts_instalacion/script_1.sh
 mono /home/sarv/server-sarv-deploy/sarv-mono-pasos.exe CONF0
 
 
 #Install Scripts de Radio
+mkdir Downloads
 cd Downloads
 wget http://www.portaudio.com/archives/pa_stable_v190600_20161030.tgz
 tar -xvf pa_stable_v190600_20161030.tgz
@@ -40,8 +42,6 @@ sudo pip install mysql-python
 sudo pip install scipy
 sudo pip install numpy
 
-git clone https://github.com/farrocha/server-sarv-deploy.git
-
 
 
 #Install Programas
@@ -54,5 +54,7 @@ mono /home/sarv/server-sarv-deploy/sarv-paso-0.exe
 (crontab -l ; echo "5 * * * * git --git-dir=/home/sarv/server-sarv-deploy/.git --work-tree=/home/sarv/server-sarv-deploy pull") | crontab -
 
 
+#probar SARV-radio
+python /home/sarv/sarv-radio/sarv-finger.py /home/sarv/sarv-radio/mp3/sample1.mp3 /home/sarv/sarv-radio/mp3/test1.txt
 
 
