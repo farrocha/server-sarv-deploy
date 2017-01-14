@@ -40,7 +40,7 @@ sudo apt-get --yes install libasound-dev
 sudo apt-get --yes install python-pip 
 sudo apt-get --yes install python-dev 
 sudo apt-get --yes install libmysqlclient-dev
-sudo pip install mysql-python
+
 
 
 echo "******************"
