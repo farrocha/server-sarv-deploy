@@ -33,8 +33,13 @@ sudo pip install python-openstackclient
 sudo pip install python-swiftclient
 sudo pip install django
 sudo pip install --upgrade watson-developer-cloud
-wget https://s3.amazonaws.com/sarv/openrc.sh
-source openrc.sh
+
+echo "PROGRAMAS PARA RADIO"
+sudo apt-get --yes install python-matplotlib
+sudo apt-get --yes install libasound-dev
+sudo apt-get --yes install python-pip 
+sudo apt-get --yes install python-dev 
+sudo apt-get --yes install libmysqlclient-dev
 
 
 echo "******************"

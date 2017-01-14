@@ -26,34 +26,25 @@ mono /home/sarv/server-sarv-deploy/sarv-mono-pasos.exe CONF0
 
 
 #Install Scripts de Radio
-sudo apt-get install python-matplotlib
-sudo apt-get install libasound-dev
 cd Downloads
 wget http://www.portaudio.com/archives/pa_stable_v190600_20161030.tgz
 tar -xvf pa_stable_v190600_20161030.tgz
 cd portaudio
 ./configure && make
 sudo make install
-pip install PyAudio
-pip install pydub
 
+sudo pip install PyAudio
+sudo pip install pydub
+sudo apt-get install python-pip python-dev libmysqlclient-dev
+sudo pip install mysql-python
+sudo pip install scipy
+sudo pip install numpy
 
+git clone https://github.com/farrocha/server-sarv-deploy.git
 
-#Install Mono
-#sudo apt-get install mono-complete
-
-#Install ffmpeg
-#sudo apt-get install ffmpeg
-
-#Install Java
-#sudo add-apt-repository ppa:webupd8team/java
-#sudo apt-get update
-#sudo apt-get install oracle-java8-installer
 
 
 #Install Programas
-sudo apt-get install git
-git clone https://github.com/farrocha/server-sarv-deploy.git
 mono /home/sarv/server-sarv-deploy/sarv-paso-0.exe
 
 
