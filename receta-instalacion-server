@@ -41,6 +41,7 @@ apt-get install python-pip python-dev libmysqlclient-dev
 pip install mysql-python
 pip install scipy
 pip install numpy
+sudo apt-get install python-pyaudio
 
 
 
