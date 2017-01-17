@@ -33,11 +33,11 @@ wget http://www.portaudio.com/archives/pa_stable_v190600_20161030.tgz
 tar -xvf pa_stable_v190600_20161030.tgz
 cd portaudio
 ./configure && make
-make install
+sudo make install
 
 pip install PyAudio
 pip install pydub
-apt-get install python-pip python-dev libmysqlclient-dev
+sudo apt-get install python-pip python-dev libmysqlclient-dev
 pip install mysql-python
 pip install scipy
 pip install numpy
