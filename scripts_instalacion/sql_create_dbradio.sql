@@ -8,9 +8,10 @@ CREATE TABLE `tbl_hash_programacion` (
   `hash` binary(10) DEFAULT NULL,
   `offset` int(11) DEFAULT NULL,
   PRIMARY KEY (`ID`),
-  KEY `PK_IDRegistro` (`IDRegistro`),
-  KEY `PK_IDPais_Fecha_IDMedio` (`IDPais`,`FechaHora`,`IDMedio`)
-) ENGINE=InnoDB AUTO_INCREMENT=1875923 DEFAULT CHARSET=latin1;
+  KEY `PK_IDPais_Fecha_IDMedio` (`IDPais`,`FechaHora`,`IDMedio`),
+  KEY `PK_IDRegistro` (`IDRegistro`,`Segundo`)
+) ENGINE=InnoDB AUTO_INCREMENT=19227507 DEFAULT CHARSET=latin1;
+
 
 CREATE TABLE `tbl_hash_versiones` (
   `ID` bigint(20) NOT NULL AUTO_INCREMENT,
@@ -34,9 +35,12 @@ CREATE TABLE `tbl_programacion` (
   `Huellas` int(11) DEFAULT NULL,
   `Stamp` timestamp NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `Segundo` int(11) DEFAULT NULL,
+  `Revision` int(11) NOT NULL,
   PRIMARY KEY (`ID`),
-  KEY `PK_IDRegistro` (`IDRegistro`)
-) ENGINE=InnoDB AUTO_INCREMENT=716 DEFAULT CHARSET=latin1;
+  KEY `PK_IDRegistro` (`IDRegistro`),
+  KEY `PK_Revision` (`Revision`)
+) ENGINE=InnoDB AUTO_INCREMENT=5543 DEFAULT CHARSET=latin1;
+
 
 CREATE TABLE `tbl_versiones` (
   `ID` int(11) NOT NULL AUTO_INCREMENT,
