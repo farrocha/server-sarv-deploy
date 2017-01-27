@@ -14,7 +14,7 @@ CREATE TABLE `tbl_programacion` (
   KEY `PK_IDRegistro` (`IDRegistro`),
   KEY `PK_Revision` (`Revision`),
   KEY `PK_Pais_Fecha` (`IDPais`,`FechaHora`,`IDMedio`)
-) ENGINE=InnoDB AUTO_INCREMENT=5584 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
 
 
 
@@ -28,7 +28,7 @@ CREATE TABLE `tbl_hash_versiones` (
   PRIMARY KEY (`ID`),
   KEY `PK_Huellas` (`IDPais`,`Vigente`,`hash`),
   KEY `PK_Version_Huellas` (`IDVersion`,`hash`)
-) ENGINE=InnoDB AUTO_INCREMENT=57998389 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
 
 
 
@@ -44,7 +44,7 @@ CREATE TABLE `tbl_hash_programacion` (
   PRIMARY KEY (`ID`),
   KEY `PK_IDPais_Fecha_IDMedio` (`IDPais`,`FechaHora`,`IDMedio`),
   KEY `PK_IDRegistro` (`IDRegistro`,`Segundo`)
-) ENGINE=InnoDB AUTO_INCREMENT=20546555 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
 
 
 CREATE TABLE `tbl_versiones` (
@@ -56,6 +56,16 @@ CREATE TABLE `tbl_versiones` (
   `Stamp` timestamp NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`ID`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2946 DEFAULT CHARSET=latin1;
+
+CREATE TABLE `tbl_log` (
+  `IDLog` bigint(20) NOT NULL,
+  `Stamp` timestamp NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `Paso` int(11) DEFAULT NULL,
+  `Mensaje` varchar(345) DEFAULT NULL,
+  PRIMARY KEY (`IDLog`),
+  KEY `PK_Paso` (`Paso`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
 
 
 
