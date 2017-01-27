@@ -12,8 +12,10 @@ CREATE TABLE `tbl_programacion` (
   `Revision` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`ID`),
   KEY `PK_IDRegistro` (`IDRegistro`),
-  KEY `PK_Revision` (`Revision`)
-) ENGINE=InnoDB AUTO_INCREMENT=5543 DEFAULT CHARSET=latin1;
+  KEY `PK_Revision` (`Revision`),
+  KEY `PK_Pais_Fecha` (`IDPais`,`FechaHora`,`IDMedio`)
+) ENGINE=InnoDB AUTO_INCREMENT=5584 DEFAULT CHARSET=latin1;
+
 
 
 CREATE TABLE `tbl_hash_versiones` (
