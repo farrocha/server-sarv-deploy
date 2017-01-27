@@ -58,13 +58,14 @@ CREATE TABLE `tbl_versiones` (
 ) ENGINE=InnoDB AUTO_INCREMENT=2946 DEFAULT CHARSET=latin1;
 
 CREATE TABLE `tbl_log` (
-  `IDLog` bigint(20) NOT NULL,
+  `IDLog` bigint(20) NOT NULL AUTO_INCREMENT,
   `Stamp` timestamp NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `Paso` int(11) DEFAULT NULL,
   `Mensaje` varchar(345) DEFAULT NULL,
   PRIMARY KEY (`IDLog`),
   KEY `PK_Paso` (`Paso`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
 
 
 
