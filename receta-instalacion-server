@@ -17,14 +17,7 @@ sudo reboot
 
 # ahora nos conectamos via ssh usando el usuario sarv tal y como en una instalacion local
 sudo apt-get update
-
-sudo apt-get --yes install git
-git clone https://github.com/farrocha/server-sarv-deploy.git
-git clone https://github.com/farrocha/sarv-radio.git
-
-sudo sh /home/sarv/server-sarv-deploy/scripts_instalacion/script_1.sh
-mono /home/sarv/server-sarv-deploy/sarv-mono-pasos.exe CONF0
-
+sudo apt-get --yes install libasound-dev
 
 #Install Scripts de Radio
 mkdir Downloads
@@ -35,13 +28,18 @@ cd portaudio
 ./configure && make
 sudo make install
 
-pip install PyAudio
-pip install pydub
-sudo apt-get install python-pip python-dev libmysqlclient-dev
-pip install mysql-python
-pip install scipy
-pip install numpy
-sudo apt-get install python-pyaudio
+
+
+sudo apt-get --yes install git
+git clone https://github.com/farrocha/server-sarv-deploy.git
+git clone https://github.com/farrocha/sarv-radio.git
+
+sudo sh /home/sarv/server-sarv-deploy/scripts_instalacion/script_1.sh
+mono /home/sarv/server-sarv-deploy/sarv-mono-pasos.exe CONF0
+
+
+
+
 
 
 

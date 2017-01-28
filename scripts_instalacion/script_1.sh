@@ -21,6 +21,7 @@ sudo apt-get --yes install oracle-java8-installer
 sudo apt-get --yes install apache2
 sudo apt-get --yes install php7.0-mysql php7.0-curl php7.0-json php7.0-cgi  php7.0 
 sudo apt-get --yes install libapache2-mod-php
+sudo apt-get --yes install mysql-server
 
 echo "******************"
 echo "******************"
@@ -36,10 +37,17 @@ sudo pip install --upgrade watson-developer-cloud
 
 echo "PROGRAMAS PARA RADIO"
 sudo apt-get --yes install python-matplotlib
-sudo apt-get --yes install libasound-dev
+
 sudo apt-get --yes install python-pip 
 sudo apt-get --yes install python-dev 
 sudo apt-get --yes install libmysqlclient-dev
+pip install PyAudio
+pip install pydub
+sudo apt-get install python-pip python-dev libmysqlclient-dev
+pip install mysql-python
+pip install scipy
+pip install numpy
+sudo apt-get install python-pyaudio
 
 
 
