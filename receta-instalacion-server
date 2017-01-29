@@ -38,16 +38,7 @@ git clone https://github.com/farrocha/sarv-radio.git
 
 sudo sh /home/sarv/server-sarv-deploy/scripts_instalacion/script_1.sh
 mono /home/sarv/server-sarv-deploy/sarv-mono-pasos.exe CONF0
-
-
-
-
-
-
-
-#Install Programas
-mono /home/sarv/server-sarv-deploy/sarv-paso-0.exe
-
+mono /home/sarv/server-sarv-deploy/sarv-mono-pasos.exe 0
 
 
 # Anadir este comando al crontab para que el server se actualice automaticamente cada hora, en caso que existan cambios
@@ -57,5 +48,19 @@ mono /home/sarv/server-sarv-deploy/sarv-paso-0.exe
 
 #probar SARV-radio
 python /home/sarv/sarv-radio/sarv-finger.py /home/sarv/sarv-radio/mp3/sample1.mp3 /home/sarv/sarv-radio/mp3/test1.txt
+
+
+## Si el server es de radio en la nube :
+## Establecer parametros 
+mono /home/sarv/server-sarv-deploy/sarv-mono-pasos.exe 5550
+(crontab -l ; echo "10 * * * * mono /home/sarv/server-sarv-deploy/sarv-mono-pasos.exe 5550 ") | crontab -
+(crontab -l ; echo "20 * * * * mono /home/sarv/server-sarv-deploy/sarv-mono-pasos.exe 5560 ") | crontab -
+
+## Si el server es de radio en la local :
+## Establecer parametros 
+mono /home/sarv/server-sarv-deploy/sarv-mono-pasos.exe 5555
+(crontab -l ; echo "10 * * * * mono /home/sarv/server-sarv-deploy/sarv-mono-pasos.exe 5555 ") | crontab -
+(crontab -l ; echo "20 * * * * mono /home/sarv/server-sarv-deploy/sarv-mono-pasos.exe 5560 ") | crontab -
+
 
 
