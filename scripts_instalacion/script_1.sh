@@ -23,6 +23,9 @@ sudo apt-get --yes install php7.0-mysql php7.0-curl php7.0-json php7.0-cgi  php7
 sudo apt-get --yes install libapache2-mod-php
 sudo apt-get --yes install mysql-server
 
+
+
+
 echo "******************"
 echo "******************"
 echo "INSTALANDO PIPS..."
@@ -49,17 +52,9 @@ pip install scipy
 pip install numpy
 sudo apt-get install python-pyaudio
 
+echo "Creando usuarios en MYSQL Local"
+mysql -uroot -ppublisearch Create
 
-
-echo "******************"
-echo "******************"
-echo "PROBANDO CONEXIONES..."
-echo ""
-swift list
-echo ""
-echo ""
-echo "******************"
-echo "******************"
 
 echo "Fin de instalacion de librerias"
 
