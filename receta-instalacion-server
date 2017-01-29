@@ -18,6 +18,8 @@ sudo reboot
 # ahora nos conectamos via ssh usando el usuario sarv tal y como en una instalacion local
 sudo apt-get update
 sudo apt-get --yes install libasound-dev
+sudo apt-get --yes install build-essential
+
 
 #Install Scripts de Radio
 mkdir Downloads
