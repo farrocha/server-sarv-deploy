@@ -31,7 +31,7 @@ cd portaudio
 sudo make install
 
 
-
+cd ~
 sudo apt-get --yes install git
 git clone https://github.com/farrocha/server-sarv-deploy.git
 git clone https://github.com/farrocha/sarv-radio.git
@@ -53,14 +53,14 @@ python /home/sarv/sarv-radio/sarv-finger.py /home/sarv/sarv-radio/mp3/sample1.mp
 ## Si el server es de radio en la nube :
 ## Establecer parametros 
 mono /home/sarv/server-sarv-deploy/sarv-mono-pasos.exe 5550
-(crontab -l ; echo "10 * * * * mono /home/sarv/server-sarv-deploy/sarv-mono-pasos.exe 5550 ") | crontab -
-(crontab -l ; echo "20 * * * * mono /home/sarv/server-sarv-deploy/sarv-mono-pasos.exe 5560 ") | crontab -
+(crontab -l ; echo "10 * * * * mono /home/sarv/server-sarv-deploy/sarv-paso-0.exe 5550 ") | crontab -
+(crontab -l ; echo "20 * * * * mono /home/sarv/server-sarv-deploy/sarv-paso-0.exe 5560 ") | crontab -
 
 ## Si el server es de radio en la local :
 ## Establecer parametros 
 mono /home/sarv/server-sarv-deploy/sarv-mono-pasos.exe 5555
-(crontab -l ; echo "10 * * * * mono /home/sarv/server-sarv-deploy/sarv-mono-pasos.exe 5555 ") | crontab -
-(crontab -l ; echo "20 * * * * mono /home/sarv/server-sarv-deploy/sarv-mono-pasos.exe 5560 ") | crontab -
+(crontab -l ; echo "10 * * * * mono /home/sarv/server-sarv-deploy/sarv-paso-0.exe 5555 ") | crontab -y
+(crontab -l ; echo "20 * * * * mono /home/sarv/server-sarv-deploy/sarv-paso-0.exe 5560 ") | crontab -
 
 
 

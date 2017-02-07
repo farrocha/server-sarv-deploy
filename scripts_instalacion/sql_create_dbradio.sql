@@ -10,6 +10,7 @@ CREATE TABLE `tbl_programacion` (
   `Stamp` timestamp NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `Segundo` int(11) DEFAULT NULL,
   `Revision` int(11) NOT NULL DEFAULT '0',
+  `Creacion` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`ID`),
   KEY `PK_IDRegistro` (`IDRegistro`),
   KEY `PK_Revision` (`Revision`),
