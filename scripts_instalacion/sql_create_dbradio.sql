@@ -63,6 +63,7 @@ CREATE TABLE `tbl_log` (
   `Stamp` timestamp NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `Paso` int(11) DEFAULT NULL,
   `Mensaje` varchar(345) DEFAULT NULL,
+  `IDComputadora` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`IDLog`),
   KEY `PK_Paso` (`Paso`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
