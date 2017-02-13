@@ -63,4 +63,7 @@ mono /home/sarv/server-sarv-deploy/sarv-mono-pasos.exe 5555
 (crontab -l ; echo "20 * * * * mono /home/sarv/server-sarv-deploy/sarv-paso-0.exe 5560 ") | crontab -
 
 
+## En el caso del server de datos de radio, se deben anadir los siguientes comandos
+tmp_table_size=8G
+max_heap_table_size=8G
 
