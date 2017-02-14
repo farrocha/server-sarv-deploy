@@ -41,7 +41,6 @@ CREATE TABLE `tbl_hash_programacion` (
   `Segundo` int(11) DEFAULT NULL,
   `hash` binary(10) DEFAULT NULL,
   `offset` int(11) DEFAULT NULL,
-  PRIMARY KEY (`ID`),
   KEY `PK_IDPais_Fecha_IDMedio` (`IDPais`,`FechaHora`,`IDMedio`),
   KEY `PK_IDRegistro` (`IDRegistro`,`Segundo`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
