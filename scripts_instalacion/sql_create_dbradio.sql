@@ -34,7 +34,6 @@ CREATE TABLE `tbl_hash_versiones` (
 
 
 CREATE TABLE `tbl_hash_programacion` (
-  `ID` int(11) NOT NULL AUTO_INCREMENT,
   `IDRegistro` bigint(20) unsigned DEFAULT NULL,
   `IDPais` int(11) DEFAULT NULL,
   `FechaHora` datetime DEFAULT NULL,
