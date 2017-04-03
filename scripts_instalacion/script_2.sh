@@ -36,6 +36,7 @@ sudo pip install python-openstackclient
 sudo pip install python-swiftclient
 sudo pip install django
 sudo pip install --upgrade watson-developer-cloud
+pip install --upgrade --user awscli
 
 echo "PROGRAMAS PARA RADIO"
 sudo apt-get --yes install python-matplotlib
