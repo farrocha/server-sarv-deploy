@@ -30,12 +30,12 @@ echo "******************"
 echo "INSTALANDO PIPS..."
 echo ""
 
-sudo pip install boto
-sudo pip install psutil
-sudo pip install python-openstackclient
-sudo pip install python-swiftclient
-sudo pip install django
-sudo pip install --upgrade watson-developer-cloud
+pip install boto
+pip install psutil
+pip install python-openstackclient
+pip install python-swiftclient
+pip install django
+pip install --upgrade watson-developer-cloud
 
 
 echo "PROGRAMAS PARA RADIO"
