@@ -9,7 +9,8 @@ apt-get --yes install vsftpd
 apt-get --yes install libx264-dev
 apt-get --yes install libmp3lame-dev
 apt-get --yes install libxcb-xfixes0-dev
-apt-get --yes  install ffmpeg
+apt-get --yes install ffmpeg
+apt-get --yes install software-properties-common
 
 apt-get update
 
@@ -40,6 +41,12 @@ apt-get install python-pyaudio
 echo "Creando usuarios en MYSQL Local"
 mysql -uroot -ppublisearch Create
 
+wget -q https://packages.microsoft.com/config/ubuntu/18.04/packages-microsoft-prod.deb
+dpkg -i packages-microsoft-prod.deb
+add-apt-repository universe
+apt-get install apt-transport-https
+apt-get update
+apt-get --yes install dotnet-sdk-2.2
 
 echo "Fin de instalacion de librerias"
 
